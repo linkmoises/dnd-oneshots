@@ -1,0 +1,3 @@
+[submodule "lib/DND-5e-LaTeX-Template"]
+	path = lib/DND-5e-LaTeX-Template
+	url = https://github.com/rpgtex/DND-5e-LaTeX-Template.git
