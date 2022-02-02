@@ -1,7 +1,16 @@
 \documentclass[10pt,twoside,twocolumn,openany]{dndbook}
+\let\chaptername\relax
 
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage[singlelinecheck=false]{caption}
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{shortvrb}
+\usepackage{stfloats}
+\usepackage{ifoddpage}
+
+\DndSetFonts[section-style = \linespread{.9} \color{titlered} \LARGE \scshape \RaggedRight]
 
 \title{Luna de sangre\\
 \large One shot para personajes de nivel 1}
@@ -14,11 +23,12 @@
 
 \maketitle
 
-%% \mainmatter%
+\mainmatter
 
-\part{Campamento Goblin}
+\part*{Campamento Goblin}
 
-\chapter{Luna de Sangre}
+\chapter*{Luna de Sangre}
+\addcontentsline{toc}{chapter}{Luna de Sangre}
 
 \DndDropCapLine{L}{as niñas de una aldea cerca} de Phandalin han estado desapareciendo en los últimos 7 días. Nadie sabe que está ocurriendo, solo se sabe que se acuestan y a la mañana siguiente ya no están. Los padres y madres preocupados ahora duermen en la misma habitación de sus hijos o les amarran a la cama al momento de dormir para evitar que desaparezcan. La última niña en desaparecer fue la hija del gobernador hace solo un día. Han desaparecido un total de 12 niñas en ese lapso de tiempo.
 
@@ -58,9 +68,178 @@ Se encuentra en el centro del campamento, tiene una sola entrada y salida. Es cu
 Son 3 en total, bastante sencillas son dormitorios para los goblins, hay varios catres, una mesa donde colocan su equipo y varios barriles.
 
 \DndArea{Tienda del custodio}
-El goblin que custodia las celdas es también el goblin que se encarga de cocinar, pues el que menos trabajo hace si solamente se dedicará a custodiar las celdas. Vigila que los prisioneros no hagan ruido. Una o dos veces al día hace un recorrido por las celdas. Diariamente los goblins rotan este puesto de manera que cada día hay uno diferente en este puesto. Hay varias mesas y provisiones para cocinar.
+El goblin que custodia se encarga de vigilar que los prisioneros no hagan ruido. Una o dos veces al día hace un recorrido por las celdas. Diariamente los goblins rotan este puesto de manera que cada día hay uno diferente.
+
+\DndArea{Tienda de provisiones}
+El goblin que se encuentra en esta tienda se encarga de cocinar y preparar los alimentos para todo el campamento. Hay varias mesas disponibles, alimentos y provisiones almacenadas aquí.
 
 \DndArea{Torres vigías}
 Estructuras hechas con vigas de madera que se levantan hasta cinco metros del suelo. Permiten a los goblins arqueros vigilar la explanada del campamento.
+
+\begin{DndComment}{Eventos}
+
+Durante el tiempo que los jugadores permanezcan allí sucederán los siguientes acontecimientos:
+
+\begin{itemize}
+  \item Tomará el prisionero que lleva más tiempo (PNJ) para alimentar a su perro infernal. Este PNJ morirá delante de todos a la primera hora del anochecer. Gheed advertirá que si alguien intenta escapar, Geb se encargará y le servirá de alimento. Esto creará un ambiente de tensión entre los jugadores.
+  \item La noche de la luna de sangre empezará un ritual en el foso de sacrificios desde el inicio de la luna de sangre a las 8 de la noche. A partir de esta hora conducirá las niñas custodiadas por los goblins hacia el foso de los sacrificios. Tomará una por una y les cortará la cabeza con un hacha en un altar improvisado cada veinte minutos y arrojará al foso de sacrificios dónde un fuego de color verde intenso danza en la oscuridad.
+\end{itemize}
+
+\end{DndComment}
+
+\section{Conclusión de la Parte 1}
+
+Hay que destacar que si los jugadores intentan escapar a lo loco, confrontando directamente a los enemigos, lo más seguro es que acaben muertos. Los adversarios poseen una abundante ventaja numérica y podrían poner en un serio aprieto a los jugadores si optan por una estrategia directa.
+
+Esta aventura está preparada para que los jugadores planeen su fuga y la del resto de las niñas prisioneras. Estos pueden intentar encargarse de algunos de los goblins, pero lo más seguro es que alguno muera por el camino si hay combates abiertos. Lo mejor será que los jugadores intenten acabar con los enemigos poco a poco, mediante subterfugios, intentando escapar de sus celdas y acabando con los goblins en pequeños grupos mientras descansan en sus tiendas.
+
+Otras opciones serían escapar de las celdas sigilosamente (forzando la cerradura de la celda), envenenar la comida (que afectaría a todos los goblins, Gheed y Geb incluidos) o asesinar por la noche a todos los goblins e intentarlo con Gheed. 
+
+Los eventos de combate están pensados para que, de tener éxito, los jugadores se enfrenten poco a poco a todos los enemigos en cantidades asumibles, aunque podrían sufrir el desgaste, sobre todo de cara al último enfrentamiento.
+
+Los jugadores superarán esta parte de la aventura si todos los miembros del campamento se han rendido o han sido muertos. Cómo recompensa obtendrán un item mágico del alijo de Gheed y recuperarán su arma básica.
+
+
+\part*{Huida a la aldea}
+
+Cómo alternativa, los jugadores deben escapar con las niñas del campamento y llevarlas sanas y salvas hasta la aldea. Antes de ello deberán sortear una serie de trampas que han dispuesto los goblins en el camino de salida. El campamento se halla unos 16 km bosque adentro en un terreno sumamente accidentado. Dependiendo del momento que logren escapar podrá ser al atardecer con una temperatura fría y condiciones de niebla no muy densa o empezando la noche del día de la luna de sangre. La salida se encuentra al oeste del campamento.
+
+Habrán 3 trampas dispuestas en el camino. La primera un foso cubierto por una enramada a pocos metros de la salida. Es posible que caigan si no tienen la percepción superior a XX. Luego de superar este obstáculo oirán el aullido infernal de Geb muriendo que invocara 2 perros demoníacos adicionales (pero de nivel y puntos de impacto de la mitad de Geb) e irán tras los jugadores y las niñas. El avance de la jauría demoníaca lo determinará 1d10. Un resultado igual o inferior a 5 implicará que los alcanzarán poco tiempo después de pasar la primera trampa. Un resultado mayor a 5 implicará que los alcanzan antes de la segunda trampa.
+
+La segunda trampa es un sistema que lanza dardos qué están impregnados con un somnifero en sus puntas. Si alguno del grupo es alcanzado, ralentizara el avance como grupo, al obligar a cargar a los afectados y predisponiendolos a ser alcanzados por los perros infernales.
+
+Una tercera y última trampa estara esperándolos a 1 km de la aldea. Se trata de otro foso cubierto por una enramada y que es custodiado de manera oculta por 2 goblins arqueros del campamento desde los árboles esperando por cualquier incursión desde la aldea.
+
+\section{Conclusión de parte 2}
+
+Los jugadores superarán esta parte de la aventura si logran llegar a la aldea con las niñas. Si logran llegar con las 12 niñas recibirán una recompensa de 100 piezas de oro cada uno. Si muere alguna de las niñas recibirán una recompensa de 50 piezas de oro.
+
+\chapter*{Gheed}
+\addcontentsline{toc}{chapter}{Gheed - Chamán Hobgoblin}
+
+\begin{figure*}[!t]
+     \checkoddpage
+     \vspace*{\the\dimexpr-1in-\voffset-\topmargin-\headheight-\headsep\relax}%
+     \ifoddpage%
+       \hspace*{\the\dimexpr-1in-\hoffset-\oddsidemargin\relax}%
+     \else%
+      \hspace*{\the\dimexpr-1in-\hoffset-\evensidemargin\relax}%
+     \fi%
+     \includegraphics[width=\paperwidth]{media/chaman-hobgoblin.png}
+\end{figure*}
+
+% Monster stat block
+\begin{DndMonster}[float*=b,width=\textwidth + 8pt]{Monster Foo}
+  \begin{multicols}{2}
+    \DndMonsterType{Medium aberration (metasyntactic variable), neutral evil}
+
+    % If you want to use commas in the key values, enclose the values in braces.
+    \DndMonsterBasics[
+        armor-class = {9 (12 with \emph{mage armor})},
+        hit-points  = {\DndDice{3d8 + 3}},
+        speed       = {30 ft., fly 30 ft.},
+      ]
+
+    \DndMonsterAbilityScores[
+        str = 12,
+        dex = 8,
+        con = 13,
+        int = 10,
+        wis = 14,
+        cha = 15,
+      ]
+
+    \DndMonsterDetails[
+        %saving-throws = {Str +0, Dex +0, Con +0, Int +0, Wis +0, Cha +0},
+        %skills = {Acrobatics +0, Animal Handling +0, Arcana +0, Athletics +0, Deception +0, History +0, Insight +0, Intimidation +0, Investigation +0, Medicine +0, Nature +0, Perception +0, Performance +0, Persuasion +0, Religion +0, Sleight of Hand +0, Stealth +0, Survival +0},
+        %damage-vulnerabilities = {cold},
+        %damage-resistances = {bludgeoning, piercing, and slashing from nonmagical attacks},
+        %damage-immunities = {poison},
+        %condition-immunities = {poisoned},
+        senses = {darkvision 60 ft., passive Perception 10},
+        languages = {Common, Goblin, Undercommon},
+        challenge = 1,
+      ]
+    % Traits
+    \DndMonsterAction{Innate Spellcasting}
+    Foo's spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). It can innately cast the following spells, requiring no material components:
+    \begin{DndMonsterSpells}
+      \DndInnateSpellLevel{misty step}
+      \DndInnateSpellLevel[3]{fog cloud, rope trick}
+      \DndInnateSpellLevel[1]{identify}
+    \end{DndMonsterSpells}
+
+    \DndMonsterAction{Spellcasting}
+    Foo is a 2nd-level spellcaster. Its spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). It has the following sorcerer spells prepared:
+    \begin{DndMonsterSpells}
+      \DndMonsterSpellLevel{blade ward, fire bolt, light, shocking grasp}
+      \DndMonsterSpellLevel[1][3]{burning hands, mage armor, shield}
+    \end{DndMonsterSpells}
+
+    \DndMonsterSection{Actions}
+    \DndMonsterAction{Multiattack}
+    The foo makes two melee attacks.
+
+    %Default values are shown commented out
+    \DndMonsterAttack[
+      name=Dagger,
+      %distance=both, % valid options are in the set {both,melee,ranged},
+      %type=weapon, %valid options are in the set {weapon,spell}
+      mod=+3,
+      %reach=5,
+      %range=20/60,
+      %targets=one target,
+      dmg=\DndDice{1d4+1},
+      dmg-type=piercing,
+      %plus-dmg=,
+      %plus-dmg-type=,
+      %or-dmg=,
+      %or-dmg-when=,
+      %extra=,
+    ]
+
+    %\DndMonsterMelee calls \DndMonsterAttack with the melee option
+    \DndMonsterMelee[
+      name=Flame Tongue Longsword,
+      mod=+3,
+      %reach=5,
+      %targets=one target,
+      dmg=\DndDice{1d8+1},
+      dmg-type=slashing,
+      plus-dmg=\DndDice{2d6},
+      plus-dmg-type=fire,
+      or-dmg=\DndDice{1d10+1},
+      or-dmg-when=if used with two hands,
+      %extra=,
+    ]
+
+    %\DndMonsterRanged calls \DndMonsterAttack with the ranged option
+    \DndMonsterRanged[
+      name=Assassin's Light Crossbow,
+      mod=+1,
+      range=80/320,
+      dmg=\DndDice{1d8},
+      dmg-type=piercing,
+      %plus-dmg=,
+      %plus-dmg-type=,
+      %or-dmg=,
+      %or-dmg-when=,
+      extra={, and the target must make a DC 15 Constitution saving throw, taking 24 (7d6) poison damage on a failed save, or half as much damage on a successful one}
+    ]
+
+    % Legendary Actions
+    \DndMonsterSection{Legendary Actions}
+    The foo can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The foo regains spent legendary actions at the start of its turn.
+
+    \begin{DndMonsterLegendaryActions}
+      \DndMonsterLegendaryAction{Move}{The foo moves up to its speed.}
+      \DndMonsterLegendaryAction{Dagger Attack}{The foo makes a dagger attack.}
+      \DndMonsterLegendaryAction{Create Contract (Costs 3 Actions)}{The foo presents a contract in a language it knows and waves it in the face of a creature within 10 feet. The creature must make a DC 10 Intelligence saving throw. On a failure, the creature is incapacitated until the start of the foo's next turn. A creature who cannot read the language in which the contract is written has advantage on this saving throw.}
+    \end{DndMonsterLegendaryActions}
+  \end{multicols}
+\end{DndMonster}
+
+The |DndMonster| environment is used to typeset monster and NPC stat blocks. The module supplies many functions to easily typeset the contents of the stat block
+
 
 \end{document}
