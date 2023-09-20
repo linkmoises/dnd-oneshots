@@ -19,8 +19,9 @@ Esta plantilla `dndbook` está integrada como submódulo de git en el directorio
 LaTeX en sí mantiene varias dependencias, pero las instalé a medida que obtenía errores de 
 compilación, por lo que se me hace dificil enumerarlas de manera específica. Los paquetes que 
 instalé en su momento en Arch Linux son: `texlive-fontsrecommended`, `texlive-latexextra`, 
-`texlive-langspanish`, `texlive-publishers`, `texlive-plaingeneric`. Solo es necesario descargar 
-el submódulo para empezar a utilizarla:
+`texlive-langspanish`, `texlive-publishers`, `texlive-plaingeneric`. Es posible que la plantilla 
+tenga más dependencias, pero como uso LaTeX rutinariamente, me es un poco difícil saberlo. Para 
+utilizarla solo es necesario descargar el submódulo para empezar:
 
 ```
 cd lib
@@ -39,3 +40,10 @@ Los diseños e ilustraciones son en su mayoría descargados desde internet. Se l
 a los autores y se enlaza la versión original cuando es posible. Se les da formato con el
 editor de imágenes [gimp](https://www.gimp.org/). Los mapas incluidos en las aventuras son 
 realizados con la herramienta web [Inkarnate](https://inkarnate.com/).
+
+LaTeX genera muchos archivos intermedios y logs, para limpiar el directorio luego de una o 
+varias compilaciones solo es necesario hacer:
+
+```
+latexmk -c
+```
