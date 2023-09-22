@@ -9,6 +9,8 @@
 \usepackage{shortvrb}
 \usepackage{stfloats}
 \usepackage{ifoddpage}
+\usepackage{graphicx}
+%%\usepackage{pdfpages}
 \usepackage{hyperref}
 
 \hypersetup{
@@ -19,11 +21,13 @@
 \DndSetFonts[section-style = \linespread{.9} \color{titlered} \LARGE \scshape \RaggedRight]
 
 \title{Luna de sangre\\
-\large One shot para personajes de nivel 1 a 3}
+\large One shot para personajes de nivel inicial}
 \author{linkmoises}
 \date{\today}
 
 \begin{document}
+
+%%\includepdf[pages=1,fitpaper]{covers/1-luna-de-sangre.pdf}
 
 \frontmatter
 
@@ -55,28 +59,35 @@ por mala suerte o inexperiencia, hasta ahora no se sabe de ninguno de ellos.
 
 Dependiendo de la conformación del grupo o del tiempo de disponible, la aventura puede ser abordada
 permitiendo que el grupo explore las aldeas cercanas y que encuentren un rastro que se interne al 
-bosque cercano. Queda a discreción del Master decidir cómo fueron capturados los jugadores y en qué 
+bosque cercano. Queda a discreción del DM decidir cómo fueron capturados los jugadores y en qué 
 momento. El grupo pudo ser emboscado o caer en alguna trampa y ser capturados. En todo caso,
 los miembros del grupo llegan inconscientes a las celdas dónde los tienen prisioneros.
 
 Los aventureros despertarán cerca de las diez de la noche, en celdas a la intemperie hechas por vigas de 
-madera y algunos barrotes de hierro. Las vigas han sido encebadas para evitar que algún habilidoso 
-logré trepar por ellas y terminan en puntas afiladas.
+madera, algunos barrotes de hierro y sin ninguna de sus armas.
+
 
 \section{Parte 1: Campamento Goblin}
 
 A pesar de preferir ambientes oscuros y húmedos como cuevas, por alguna razón diferente a la usual 
 un grupo de poco más de 20 goblins han establecido un campamento en las profundidades del bosque rodeado de 
-árboles altos. Hay 5 tiendas de campaña improvisadas con una central de más del doble de tamaño que 
-las otras. La explanada del campamento ofrece un terreno bastante llano y han colocado ocho torres 
-vigías alrededor del campamento. Frente al campamento central, hay un pozo que ha sido excavado de 
-manera circular rodeado por piedras con marcas rúnicas. Frente al foso, hay una mesa dispuesta como 
-altar ceremonial.
+árboles altos al lado de un río. Hay 5 tiendas improvisadas con una principal del doble de tamaño que 
+las otras. La explanada del campamento ofrece un terreno bastante llano. Frente al campamento central, 
+hay un pozo que ha sido excavado de manera circular rodeado por piedras con marcas rúnicas. 
+Frente al foso, hay una mesa dispuesta como altar ceremonial.
 
 Las celdas están ubicadas al sur del campamento y en su mayoría tienen 3 niñas por cada celda. Hay 
 niñas asustadas en su mayoría, agotadas por la mala alimentación y deshidratadas algunas por qué 
-están presentando vómitos y diarrea. Las tres torres vigías más cercanas a las celdas improvisadas 
-tienen un arquero cada una. 
+están presentando vómitos y diarrea.
+
+En la figura \ref{fig:camp1} se puede apreciar la disposición general del campamento goblin.
+
+\begin{figure*}[hb!]
+  \centering
+  \includegraphics[width=\textwidth]{maps/goblin-camp.jpg}
+  \caption{Campamento Goblin}
+  \label{fig:camp1}
+\end{figure*}
 
 \begin{DndComment}{Prisioneros}
 Los jugadores estarán repartidos de manera individual en cada celda. Cuando empiecen a preguntar qué 
@@ -103,22 +114,18 @@ cubiertas de pieles y trofeos de batalla. En el interior, los jugadores pueden e
 detallado de la región, marcando lugares de interés y posibles aliados.
 
 \DndArea{Pozo de sacrificios}
-Esta área es un círculo excavado en el suelo, rodeado de piedras y adornado con runas oscuras. En el 
-centro del círculo, hay un pozo profundo y oscuro donde los goblins realizan sus rituales de sacrificio.
-Frente al pozo, los jugadores pueden encontrar una mesa ritual sobre la que hay un cuenco de madera y un
-amuleto mágico que permite la comunicación telepática a corta distancia.
+Esta área es un círculo excavado en el suelo, rodeado de piedras y adornado con runas oscuras. En esta 
+área Grommash realiza sus rituales de sacrificio. Frente al pozo, los jugadores pueden encontrar 
+una mesa ritual sobre la que hay un cuenco ritual, un cuchillo y un libro ritual.
 
 \DndArea{Tiendas goblins}
 Las tiendas improvisadas de los goblins son pequeñas y sucias, con literas apiladas en desorden. Hay 
 varios catres de cuero, una mesa de madera improvisada donde colocan su equipo y varios barriles. 
 Algunos goblins guardan pequeños tesoros personales en sus literas, como monedas de oro o joyas robadas.
 En una de las literas, los jugadores pueden encontrar una carta escrita en un idioma desconocido que 
-puede revelar información sobre los planes de Grommash.
-
-\DndArea{Torres vigías}
-Las torres vigía están construidas con troncos y ramas y están protegidas por goblins armados con arcos 
-y lanzas. En la torre cercana al área de celdas, los jugadores pueden encontrar una bolsa con flechas 
-envenenadas.
+puede revelar información sobre los planes de Grommash. Cerca al río hay tres jaulas vacías con cadenas 
+en su interior. Son usadas para amarrar a los huargos que montan los goblins que patrullan alrededor
+del campamento.
 
 \DndArea{Área de celdas}
 Este lugar está rodeado por una empalizada de madera y alambre de púas. En el suelo de tierra, hay 
@@ -155,18 +162,23 @@ sabrán a que atenerse.
 
 La noche de la luna de sangre, Grommash empezará un ritual en el foso de sacrificios desde el inicio de la 
 luna de sangre a las 11 de la noche. A partir de esta hora conducirá las niñas custodiadas por los 
-goblins hacia el foso de los sacrificios. Grommash controlará telepáticamente una por una haciendo 
-que se corte el cuello frente al altar improvisado y el foso de sacrificios. Una chica cada cinco minutos, 
-mientras colecta la sangre que emana del cuello de sus víctimas en un cuenco de madera. Cuando a la chica 
-en cuestión comience a agonizar, sus goblins la arrojarán al foso de sacrificios.
+goblins hacia el foso de los sacrificios. Grommash controlará telepáticamente, con ayuda de un 
+amuleto que cuelga de su cuello con símbolos que dan cuenta que se trata de un objeto infernal, 
+a una por una haciendo que se corte el cuello frente al altar improvisado y el foso de sacrificios. 
+Una chica cada cinco minutos, mientras colecta la sangre que mana del cuello de sus víctimas en el 
+cuenco ritual. Cuando la chica en cuestión comience a agonizar de pie, sus goblins la arrojarán al 
+foso de sacrificios.
 
-Que ocurra o no este último evento estará determinado por las acciones de los personajes.
+Que ocurra o no este último evento estará determinado por las acciones de los personajes jugadores.
 
 \section{Conclusión}
 
 Hay que destacar que si los jugadores intentan escapar a lo loco, confrontando directamente a los 
 enemigos, lo más seguro es que acaben muertos. Los adversarios poseen una abundante ventaja numérica y 
 podrían poner en un serio aprieto a los jugadores si optan por una estrategia directa.
+
+Antes de iniciar el ritual, Grommash se encontrará en la tienda principal realizando algunos
+rezos a sus deidades demoníacas preparandose para la luna de sangre.
 
 Esta aventura está preparada para que los jugadores planeen su fuga y la del resto de las niñas prisioneras. 
 Estos pueden intentar encargarse de algunos de los goblins, pero lo más seguro es que alguno muera por 
@@ -190,13 +202,14 @@ armas y armaduras básicas.
 
 Los jugadores deben escapar con las niñas del campamento y llevarlas sanas y salvas hasta la aldea. 
 Antes de ello deberán sortear una serie de trampas que han dispuesto los goblins en el camino de salida. 
-El campamento se halla unos 7 km bosque adentro en un terreno sumamente accidentado y que permanentemente 
-esta cubierto de una niebla espesa. Con el escape ocurriendo durante la noche la temperatura fría del 
-ambiente y condiciones de niebla densa se limita la visión a unos 30 pies de distancia. La salida 
-se encuentra al oeste del campamento.
+El campamento se halla unos 5 millas bosque adentro, en un terreno sumamente accidentado y que 
+permanentemente esta cubierto de una niebla espesa. Con el escape ocurriendo durante la noche 
+la temperatura fría del ambiente, condiciones de niebla densa y la luna de sangre ocurriendo dando 
+un tono rojizo al ambiente, la visión estará limitada a unos 30 pies de distancia. La salida se 
+encuentra al oeste del campamento.
 
 \begin{DndReadAloud}
-Mientras escapan hacia la aldea, cuando ya se han alejado unos cien metros del campamento, escuchan 
+Mientras escapan hacia la aldea, cuando ya se han alejado unos 300 pies del campamento, escuchan 
 un aullido gutural. Una brisa gélida, suave y ominosa se encuentra con los jugadores. La oscuridad
 se cierra totalmente ante el grupo y el tono rojo que hay en el ambiente desaparece por un momento.
 La tierra tiembla por un momento.
@@ -210,16 +223,17 @@ la salida. Es posible que caigan si no superan una prueba de Sabiduría (percepc
 
 La segunda trampa es un sistema que lanza dardos qué están impregnados con un somnifero en sus puntas. 
 Si alguno del grupo es alcanzado, ralentizara el avance como grupo, al obligar a cargar a los afectados 
-y predisponiéndolos a ser alcanzados por los perros infernales.
+y predisponiéndolos a ser alcanzados por los goblins montados en huargos y obligando al grupo a 
+enfrentarlos.
 
 Una tercera y última trampa estara esperándolos a 500 pies de la aldea. Se trata de otro foso cubierto
 por una enramada y que es custodiado de manera oculta por 4 goblins arqueros del campamento desde los 
 árboles esperando por cualquier incursión desde la aldea. 
 
-En este momento son alcanzados por Grommash quien va montado sobre Sombrafauces. Utilizó su último 
-aliento para arrojar unos goblins al foso y logra recuperar la mitad de sus puntos de golpe y también de 
-Sombrafauces. Grommash tiene un aura oscura y una mirada que recuerda las llamas infernales, ya que al 
-realizar el ritual de luna de sangre ganó una acción legendaria.
+Al llegar a la última trampa, son alcanzados por Grommash quien va montado sobre Sombrafauces.
+Sombrafauces ha crecido en tamaño dos veces de la última vez que lo vieron. Grommash se ha desplazado
+utilizando Teletransportación sombría. Grommash tiene un aura oscura y una mirada que recuerda las llamas 
+infernales. Al realizar el ritual de luna de sangre ganó una acción legendaria.
 
 \section{Conclusión}
 
@@ -229,12 +243,14 @@ niñas recibirán una recompensa de 50 piezas de oro para todo el grupo.
 
 \section{Créditos}
 
-Las ilustraciones en este one shot, son creaciones de sus respectivos autores. Estos son los enlaces
-a las ilustraciones originales:
+Las ilustraciones en este one shot, son creaciones de sus respectivos autores. Los mapas han sido 
+creados con la herramienta \href{https://inkarnate.com/}{Inkarnate}. Estos son los enlaces a las 
+ilustraciones originales:
 
 \begin{itemize}
   \item Grommash Tejesombras por \href{https://legendofthecryptids.fandom.com/wiki/Greedy_Goblin_King}{Hua Lu: Greedy Goblin King para el juego de cartas Legends of Cryptids}.
   \item Sombrafauces \href{https://www.deviantart.com/lucy-lisett/art/Death-Dog-901248620}{Lucy-Lisett Hell Dog en Deviantart creado el para TTRPG Blood \& Doom}.
+  \item Goblin Camp por \href{https://inkarnate.com/m/zkNwn5--goblin-camp/}{DMMarty en Inkarnate} modificado por linkmoises para este one shot.
 \end{itemize}
 
 \chapter*{Grommash}
