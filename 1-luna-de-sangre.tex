@@ -10,7 +10,7 @@
 \usepackage{stfloats}
 \usepackage{ifoddpage}
 \usepackage{graphicx}
-%%\usepackage{pdfpages}
+\usepackage{tikz}
 \usepackage{hyperref}
 
 \hypersetup{
@@ -27,7 +27,13 @@
 
 \begin{document}
 
-%%\includepdf[pages=1,fitpaper]{covers/1-luna-de-sangre.pdf}
+\begin{figure}
+  \begin{tikzpicture}[remember picture,overlay]
+    \begin{scope}
+    \node [xshift=0cm,yshift=0cm] at (current page.center){\includegraphics[width=\paperwidth]{covers/1-luna-de-sangre.jpg}};
+    \end{scope}
+  \end{tikzpicture}
+\end{figure}
 
 \frontmatter
 
