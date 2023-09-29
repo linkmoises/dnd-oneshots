@@ -4,18 +4,20 @@
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[singlelinecheck=false]{caption}
-\usepackage{lipsum}
 \usepackage{listings}
 \usepackage{shortvrb}
 \usepackage{stfloats}
 \usepackage{ifoddpage}
 \usepackage{graphicx}
 \usepackage{tikz}
+\usepackage{fontawesome5} % Paquete para íconos
 \usepackage{hyperref}
 
 \hypersetup{
   colorlinks=true,
-  linkcolor=red,
+  linkcolor=black,  % Color de los enlaces internos (por ejemplo, dentro de la tabla de contenidos)
+  urlcolor=magenta,   % Color de los enlaces a URLs
+  %%citecolor=green,
   pdfauthor={Moisés Serrano Samudio},
   pdftitle={Luna de sangre},
   pdfsubject={one-shot},
@@ -44,13 +46,57 @@
 \end{figure}
 %% Finaliza portada
 
+% hack para que texto de licencia se muestre en página siguiente
+\newpage
+\thispagestyle{empty}
+\mbox{}
+
+% Texto sobre la licencia CC-BY-SA
+\newpage
+\thispagestyle{empty} % Elimina el pie de página con numeración
+
+\begin{center}
+  \vspace*{\fill} % Ajustar espacio vertical antes del texto
+  \begin{minipage}[b]{\textwidth}
+      \justifying % Cambiar a justificado
+      \noindent % Eliminar la sangría en la primera línea
+      \faCreativeCommons \faCreativeCommonsBy \faCreativeCommonsNc \faCreativeCommonsSa \hspace{0.5em} 
+      Contenido protegido por una \textbf{Licencia CC BY-NC-SA}
+      \vspace{1em} % Espacio vertical entre título licencia y texto
+
+      {\footnotesize
+      \noindent
+      El contenido escrito de este documento está protegido por la Licencia Creative Commons 
+      Atribución-NoComercial-CompartirIgual 4.0 Internacional 
+      \href{https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es}{(CC BY-NC-SA)}. Esto 
+      significa que puedes compartir, copiar, redistribuir, adaptar y crear a partir de este 
+      contenido, siempre y cuando otorgues la debida atribución al autor original y compartas tus 
+      derivados bajo una licencia similar que no permita el uso comercial. Las imágenes e 
+      ilustraciones incluidas en este documento son creaciones de sus respectivos autores y están 
+      protegidas por sus propias licencias. Consulta la sección créditos para obtener información 
+      sobre las licencias individuales y conocer el trabajo de sus autores.
+      }
+    \end{minipage}
+\end{center}
+
 \frontmatter
 
 \maketitle
 
+\tableofcontents
+
 \mainmatter
 
 \part*{Luna de Sangre}
+
+\chapter*{Sesión Cero}
+\addcontentsline{toc}{chapter}{Sesión Cero}
+
+\begin{tikzpicture}[remember picture, overlay]
+  \node [xshift=0cm,yshift=-7cm] at (current page.north) {\includegraphics[width=\paperwidth]{media/zero.png}};
+\end{tikzpicture}
+
+
 
 \chapter*{Luna de Sangre}
 \addcontentsline{toc}{chapter}{Luna de Sangre}
@@ -213,7 +259,7 @@ o han sido muertos. Cómo recompensa obtendrán un item mágico del alijo de Gro
 armas y armaduras básicas.
 
 
-\section*{Parte 2: Huida a la aldea}
+\section{Parte 2: Huida a la aldea}
 
 Los jugadores deben escapar con las niñas del campamento y llevarlas sanas y salvas hasta la aldea. 
 Antes de ello deberán sortear una serie de trampas que han dispuesto los goblins en el camino de salida. 
@@ -268,8 +314,16 @@ ilustraciones originales:
   \item Goblin Camp por \href{https://inkarnate.com/m/zkNwn5--goblin-camp/}{DMMarty en Inkarnate} modificado por linkmoises para este one shot.
 \end{itemize}
 
+%%
+%%
+%%
+\part*{Apéndice de monstruos}
+%%
+%%
+%%
+
 \chapter*{Grommash}
-\addcontentsline{toc}{chapter}{Grommash Tejesombras - Chamán Hobgoblin}
+\addcontentsline{toc}{chapter}{Grommash Tejesombras}
 
 
 \begin{tikzpicture}[remember picture, overlay]
@@ -407,7 +461,7 @@ ilustraciones originales:
 
 
 \chapter*{Sombrafauces}
-\addcontentsline{toc}{chapter}{Sombrafauces - perro del inframundo}
+\addcontentsline{toc}{chapter}{Sombrafauces}
 
 
 \begin{tikzpicture}[remember picture, overlay]
@@ -481,5 +535,20 @@ ilustraciones originales:
   \end{multicols}
 \end{DndMonster}
 
+% hack para que contraportada se muestre en página siguiente
+\newpage
+\mbox{}
+
+\newpage
+\thispagestyle{empty}
+\mbox{}
+
+\begin{figure}
+  \begin{tikzpicture}[remember picture,overlay]
+    \begin{scope}
+    \node [xshift=0cm,yshift=0cm] at (current page.center){\includegraphics[width=\paperwidth]{covers/contraportada.jpg}};
+    \end{scope}
+  \end{tikzpicture}
+\end{figure}
 
 \end{document}
