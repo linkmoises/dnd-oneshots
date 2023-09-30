@@ -11,6 +11,7 @@
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{fontawesome5} % Paquete para íconos
+\usepackage{cuted}
 \usepackage{hyperref}
 
 \hypersetup{
@@ -33,7 +34,9 @@
 
 \begin{document}
 
+%%
 %% Portada
+%%
 \newpage
 \thispagestyle{empty}
 \mbox{}
@@ -44,14 +47,20 @@
     \end{scope}
   \end{tikzpicture}
 \end{figure}
+%%
 %% Finaliza portada
+%%
 
-% hack para que texto de licencia se muestre en página siguiente
+%%
+%% hack para que texto de licencia se muestre en página siguiente
+%%
 \newpage
 \thispagestyle{empty}
 \mbox{}
 
-% Texto sobre la licencia CC-BY-SA
+%%
+%% Página para licencia
+%%
 \newpage
 \thispagestyle{empty} % Elimina el pie de página con numeración
 
@@ -89,6 +98,9 @@
 
 \part*{Luna de Sangre}
 
+%%
+%% Página para Sesión Cero
+%%
 \chapter*{Sesión Cero}
 \addcontentsline{toc}{chapter}{Sesión Cero}
 
@@ -96,8 +108,128 @@
   \node [xshift=0cm,yshift=-7cm] at (current page.north) {\includegraphics[width=\paperwidth]{media/zero.png}};
 \end{tikzpicture}
 
+%% Este bloque introduce un png transparente que empuja el texto a dos columnas hacia abajo
+\begin{strip}
+  \centering
+  \includegraphics[width=\textwidth]{media/invisible.png}
+\end{strip}
+%%
+
+\DndDropCapLine{L}{a sesión cero} es una excelente manera de asegurarse de que un one-shot o campaña comience y 
+finalice sin problemas. Lo primero que hay que recordar es que el juego incluye a los jugadores 
+en la mesa y también al director del juego o Dungeon Master (DM). El objetivo es que todos se 
+diviertan y se establezcan expectativas claras para para beneficio de todo el grupo. Aún en los 
+one-shots que son sesiones cortas resulta buena idea invertir al menos unos 15-30 minutos antes de 
+iniciar para dejar todo claro.
+
+\section*{Una nota para el DM}
+
+\begin{DndReadAloud}
+  En la preparación de la batalla siempre he comprobado que los planes son inútiles, pero la 
+  planificación es indispensable.
+  \emph{Dwight D. Eisenhower}
+\end{DndReadAloud}
+
+Esta cita es un amable recordatorio de que a veces toda la planificación puede irse al traste 
+en un juego de rol por las decisiones de los jugadores. A veces hay que ser flexibles o improvisar 
+sobre la marcha.
+
+\section*{Consejos para jugadores}
+
+La información plasmada aquí está dirigida mayormente a los jugadores y sobre todo a mantener la 
+sesión balanceada y que transcurra sin obstáculos. Estos son algunos consejos:
+
+\begin{itemize}
+  \item \emph{Minimizar distracciones}. Esto tiene que ver sobre todo con el uso de teléfonos 
+  móviles, ten en cuenta que si te distraes te perderás la diversión.
+  \item \emph{Mantener los personajes simples}. Esta aventura no requiere personajes tan complejos.
+  Si tienes un personaje de una clase lanzadora de hechizos con algunos cantrips y unos 3 ó 4 
+  hechizos de nivel 1 será suficiente. A medida que ganes experiencia en el juego y manejo de tu 
+  personaje podrás añadir mecánicas más complejas.
+  \item \emph{Intermezzo}. La aventura está dividida en 2 partes, se puede realizar un intermezzo 
+  al final de la primera parte para algunos snacks, ir al baño, etc. En otras aventura o campañas
+  se puede aprovechar este intervalo de tiempo para realizar interacciones con personajes no 
+  jugadores, como los de una tienda.
+  \item \emph{Restitución}. En aventuras largas, el intervalo de tiempo entre sesiones se 
+  considerará como un descanso largo; siempre y cuando, durante la sesión previa el grupo no se 
+  hallara en peligro mortal. Se restituirán todos los puntos de vida y hechizos gastados.
+\end{itemize}
+
+\section*{Descripción breve}
+
+Faltan 1 día para un evento astronómico de suma importancia arcana en Faerûn, la \textbf{Luna de Sangre}. 
+Durante siglos diversas razas han realizado rituales para pedir favores a sus deidades estos eventos.
+Los límites entre los planos se debilitan y es fácil pasar de un plano a otro.
+
+Esta aventura titulada Luna de Sangre es un one shot. Transcurre en aldeas cercanas a Phandalin en 
+la región de la Costa De La Espada en Faerûn. Trata sobre el secuestro de unas niñas y un 
+sacrificio ritual. Predominan en esta aventura el combate y la exploración.
+
+\section*{Duración}
+
+Se estima que esta aventura puede ser completada en una sola sesión con una duración de 1 a 2 
+horas.
+
+\section*{Reglas de casa}
+
+Las reglas de casa son reglas que no están escritas en los manuales oficiales de Dungeons and 
+Dragons, pero que consideramos pueden ayudar a que las acciones en la mesa y la fluidez del juego 
+sean mejoradas.
+
+\begin{itemize}
+  \item Las pociones curativas se pueden usar como una acción adicional en tu turno, sin la 
+  penalización descrita en el manual del jugador como acción del turno. Los mismo aplica para 
+  hechizos de curación, excepto que se cure a otra persona entonces sería una acción.
+  \item Si recibes un token de inspiración por parte del DM. Esta representa una tirada de 
+  ventaja que puedes usar en el momento que desees.
+  \item En tiradas de iniciativa, un 20 natural permite elegir al jugador su orden de 
+  iniciativa luego de establecidas todas las iniciativas.
+  \item Una alternativa en las tiradas de iniciativa, puede ser que el mismo grupo de jugadores
+  se organice tácticamente en los ataques. Podría ser que el grupo quiera que el bárbaro inicie
+  el ataque y los lanzadores de conjuros finalicen la ronda.
+  \item En tiradas de ataque, un 20 natural dobla el máximo del dado de golpe y su bonificador 
+  de competencia.
+  \item Si una criatura o personaje sufre daño por caída que excede su puntuación de Constitución, 
+  sus puntos de vida caen a 0 y queda inconsciente. Si una criatura o personaje sufre un daño por 
+  caída que excede el doble de su puntuación de Constitución, muere instantáneamente.
+\end{itemize}
+
+\section*{Reglas de creación de personajes}
+
+Es conveniente que los personajes traigan sus personajes ya creados para no prolongar la sesión. 
+Se admiten todas las clases ya publicadas en los libros oficiales de Dungeons and Dragons: Manual 
+del jugador, Guía de Xanathar para todo, El Caldero de Tasha para todo. El inventario de cada 
+personaje y hechizos disponibles se pueden elegir de entre estas opciones.
+
+\section*{Herramientas de seguridad}
+
+Las herramientas de seguridad están diseñadas para que el juego sea divertido para todos los 
+jugadores, incluido el DM. Establecer expectativas con todos en la mesa antes de jugar, puede 
+ayudar a garantizar que todos estén cómodos, seguros y no se sorprendan más adelante en el juego. 
+En esta hoja, hemos incorporado dos técnicas llamadas líneas y velos que ayudarán al DM y los 
+jugadores a manejar determinadas situaciones para que todos se diviertan.
+
+\subsection*{Líneas}
+
+Las líneas son límites estrictos sobre temas o eventos con los que el director del juego o los 
+jugadores no se sienten cómodos participando. Estos temas o eventos son "líneas" que no se pueden 
+cruzar durante todo el juego. Estos temas nunca deberían usarse en un juego ni aludirse en absoluto.
+
+Se consideran líneas: violencia sexual, abuso infantil, torturas muy descriptivas. Si en el grupo 
+alguna persona presenta una fobia, es recomendable incluirla dentro de las líneas.
+
+\subsection*{Velos}
+
+Los velos son límites suaves sobre temas o eventos que solo se describirán con detalles limitados 
+y/o solo sucederán detrás de escena. Estos pueden incluir temas que los jugadores en la mesa están 
+de acuerdo con que sucedan, pero que solo se describen con detalle limitado. Estos pueden incluir 
+temas sexuales y sangre extrema que se supone que sucede y se describe a través de un montaje 
+rápido o solo unas pocas palabras que digan que sucedió con poco detalle.
 
 
+%%
+%% Aquí en adelante inicia la aventura
+%%
 \chapter*{Luna de Sangre}
 \addcontentsline{toc}{chapter}{Luna de Sangre}
 
@@ -232,7 +364,7 @@ foso de sacrificios.
 
 Que ocurra o no este último evento estará determinado por las acciones de los personajes jugadores.
 
-\section{Conclusión}
+\section{Fuga}
 
 Hay que destacar que si los jugadores intentan escapar a lo loco, confrontando directamente a los 
 enemigos, lo más seguro es que acaben muertos. Los adversarios poseen una abundante ventaja numérica y 
@@ -249,6 +381,10 @@ pequeños grupos mientras descansan en sus tiendas.
 
 Otras opciones serían escapar de las celdas sigilosamente (forzando la cerradura de la celda), envenenar 
 a los goblins o asesinar por la noche a todos los goblins e intentarlo con Grommash. 
+
+Otra opción para el grupo sería interactuar con Grommash y tratar de convencerlo para que de forma 
+pacífica libere a las niñas. Sin embargo, esta opción sería poco viable dado el alineamiento 
+caótico malvado.
 
 Los eventos de combate están pensados para que, de tener éxito, los jugadores se enfrenten poco a poco 
 a todos los enemigos en cantidades asumibles, aunque podrían sufrir el desgaste, sobre todo de cara al 
@@ -302,6 +438,24 @@ Los jugadores superarán esta parte de la aventura si logran llegar a la aldea c
 llegar con las 12 niñas recibirán una recompensa de 100 piezas de oro cada uno. Si muere alguna de las 
 niñas recibirán una recompensa de 50 piezas de oro para todo el grupo.
 
+\section{Epílogo}
+
+En medio de la celebración del pueblo por el rescate de las niñas, un par de NPCs estará conversando
+lo suficientemente cerca del grupo una de estas dos opciones:
+
+\begin{itemize}
+  \item Si deseas conectar la Aventura de la \emph{Mina Perdida de Phandelver}: escucharán dos 
+  enanos conversando sobre Gundren Buscarocas y el rumor de haber encontrado una enorme mina de 
+  oro.
+  \item Si deseas conectar la Aventura del \emph{Dragón del Pico Agujahelada}: esucharán a dos 
+  jóvenes hablando sobre el rumor de avistamiento de una bestia cerca de las montañas.
+  \item Si deseas conectar la Aventura de \emph{Los dragones de la Isla Tempestades}: escucharán 
+  a un enano y un dracónido conversando sobre el avistamiento de dragones al oeste de las Montañas 
+  de la Espada, sobre un pequeño grupo de islas en el Mar de las Espadas. El explorador enano dijo 
+  que los vio con sus propios ojos mientras deambulaba por la Carretera Alta. Conoció a un mago en 
+  Aguas Profundas que le contó la historia de la rivalidad entre los dragones metálicos y cromáticos hace años y la caída de Sharruth, el Dragón Rojo de Fuego, cuyo encarcelamiento en el mar creó la Isla Stormwreck en la costa al sur de Thornhold.
+\end{itemize} 
+
 \section{Créditos}
 
 Las ilustraciones en este one shot, son creaciones de sus respectivos autores. Los mapas han sido 
@@ -315,7 +469,7 @@ ilustraciones originales:
 \end{itemize}
 
 %%
-%%
+%% Apéndice para monstruos
 %%
 \part*{Apéndice de monstruos}
 %%
@@ -535,14 +689,21 @@ ilustraciones originales:
   \end{multicols}
 \end{DndMonster}
 
+
+%%
+%% Página para contraportada
+%%
+
 % hack para que contraportada se muestre en página siguiente
 \newpage
 \mbox{}
 
+% hack para crear la página vacía
 \newpage
 \thispagestyle{empty}
 \mbox{}
 
+% imagen de contraportada
 \begin{figure}
   \begin{tikzpicture}[remember picture,overlay]
     \begin{scope}
