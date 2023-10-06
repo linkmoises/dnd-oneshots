@@ -101,7 +101,6 @@
 
 \mainmatter
 
-\part*{Luna de Sangre}
 
 %%
 %% Página para Sesión Cero
@@ -235,8 +234,21 @@ rápido o solo unas pocas palabras que digan que sucedió con poco detalle.
 %%
 %% Aquí en adelante inicia la aventura
 %%
+
+\part*{Luna de Sangre}
+
 \chapter*{Luna de Sangre}
-\addcontentsline{toc}{chapter}{Luna de Sangre}
+
+\begin{tikzpicture}[remember picture, overlay]
+  \node [xshift=0cm,yshift=-7cm] at (current page.north) {\includegraphics[width=\paperwidth]{media/intro-luna-sangre.png}};
+\end{tikzpicture}
+
+%% Este bloque introduce un png transparente que empuja el texto a dos columnas hacia abajo
+\begin{strip}
+  \centering
+  \includegraphics[width=\textwidth]{media/invisible.png}
+\end{strip}
+%%
 
 \DndDropCapLine{L}{as niñas de aldeas cerca de Phandalin} han estado desapareciendo en los 
 últimos 3 días. Nadie sabe que está ocurriendo, solo se sabe que se acuestan y a la mañana 
