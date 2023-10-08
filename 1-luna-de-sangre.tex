@@ -387,7 +387,8 @@ principal relacionará las informaciones y con una prueba exitosa de
 rutas de escape del campamento.
 
 En una de las tiendas, los jugadores encontrarán sus armas que les fueron quitadas al momento de 
-ser emboscados, amontonadas en un rincón.
+ser emboscados, amontonadas en un rincón. En otra de las tiendas encontrarán 3 pociones curativas 
+menores.
 
 \DndArea{Área de celdas}
 Este lugar se encuentra entre dos tiendas, el suelo es de tierra. Las celdas son rudimentarias
@@ -413,13 +414,12 @@ rezos a sus deidades demoníacas preparandose para la luna de sangre.
   con un índice acusador...
 \end{DndReadAloud}
 
-En este momento ha elegido a Valerie. Valerie, es un chico de 15 años. Fue testigo del rapto de una de las 
-niñas, pero fue capturado junto al grupo.
+En este momento ha elegido a Valerie...
 
 \begin{DndReadAloud}
 Los goblins sacan a Valerie de su celda y lo llevan ante su jefe. Grommash le dice en lengua común, 
-eres libre de irte muchacho. Tu vida no me interesa. Raudo y veloz, presa del miedo echa a correr 
-hacia el oeste por el camino que lo habían traido. Cuando casi llegaba al límite del campamento 
+eres libre de irte muchacha. Tu vida no me interesa. Raudo y veloz, presa del miedo echa a correr 
+hacia el oeste por el camino que la habían traido. Cuando casi llegaba al límite del campamento 
 con el bosque, Grommash dice "pero Sombrafauces no ha comido el día de hoy, a por él". Un aullido 
 infernal retumbo en los oídos de los prisioneros y ven con horror como una sombra infernal como un 
 perro de tres cabezas hace carrera detrás de Valerie. Cuando ya se hubo internado en el bosque, unos 
@@ -456,8 +456,8 @@ obediente.
 El objetivo se verá forzado a seguir las órdenes directas de Grommash, incluso si estas van en 
 contra de sus deseos o naturaleza. No puede resistirse ni desobedecer.
 
-El collar mantiene su control hasta que Grommash lo desactive o el portador sea liberado de alguna 
-otra manera.
+El collar mantiene su control hasta que Grommash lo desactive o el portador sea liberado con un 
+conjuro de disipar magia.
 
 %%
 %% conjuro
@@ -631,8 +631,23 @@ de plano.
 
 Los jugadores superarán esta parte de la aventura si logran llegar a la aldea con las niñas 
 luego de haber derrotado a Grommash y a Vaelistra. Si logran llegar con las 12 niñas vivas 
-recibirán una recompensa de 50 piezas de oro para todo el grupo. Si muere alguna de las niñas 
-recibirán una recompensa de 10 piezas de oro para cada PJ.
+recibirán una recompensa de 50 piezas de oro para todo el grupo. 
+
+\begin{DndReadAloud}
+  Al salir del bosque, se rompe el vilo en el que se mantenía la aldea, los padres de las niñas 
+  corren a su encuentro. Hay felicidad y júbilo en el ambiente. El gobernador se encuentra con su 
+  hija Susan, y les agradece enormemente en medio de lágrimas de alegría.
+\end{DndReadAloud}
+
+Si muere alguna de las niñas recibirán una recompensa de 5 piezas de oro para cada PJ.
+
+\begin{DndReadAloud}
+  Al salir del bosque, se rompe el vilo en el que se mantenía la aldea, los padres de las niñas 
+  corren a su encuentro. Hay algunas caras de desconcierto, padres que no encuentran a sus hijas,
+  entonces se dan cuenta de lo peor. Rompen a llorar. Hay una ambiente mixto de alegría y 
+  tristeza. El gobernador se acerca al grupo y les agradece por su valiente hazaña y se lamenta
+  por quienes no pudieron llegar.
+\end{DndReadAloud}
 
 Este es un buen momento para anunciar que los jugadores suben de nivel con todas las mejoras 
 estadísticas que ello implica y el acceso a conjuros del siguiente nivel. Se otorgan 600 puntos 
@@ -739,6 +754,7 @@ ilustraciones originales:
   \item Sombrafauces por \href{https://www.deviantart.com/lucy-lisett/art/Death-Dog-901248620}{Lucy-Lisett: Hell Dog en Deviantart creado el para TTRPG Blood \& Doom}.
   \item Vaelistra por \href{https://www.artstation.com/artwork/aRZ92J}{Merilliza Chan: The Warriors Assault portada para el libro Age of the Andinna}
   \item Goblin Camp por \href{https://inkarnate.com/m/zkNwn5--goblin-camp/}{DMMarty en Inkarnate} modificado por linkmoises para este one shot.
+  \item Contraportada por \href{https://www.deviantart.com/noahbradley/art/Strange-Gods-205766996}{Noah Bradley: Strange Gods para Wizards of the Coast}
 \end{itemize}
 
 %%
@@ -966,17 +982,20 @@ ilustraciones originales:
 \chapter*{Vaelistra}
 \addcontentsline{toc}{section}{Vaelistra (cambion)}
 
+Los cambions son la descendencia que surge del cruce entre un infernal y un humanoide. Heredan los 
+rasgos físicos de ambos progenitores pero las alas correosas y su cola tendinosa son las marcas 
+distintivas de su origen ultraterrenal.
+
 Vaelistra es un cambión perteneciente a los Nueve Infiernos. Sirve al mismísimo señor del 
-infierno, Asmodeo a quién le sirve como mensajera. Vaelistra teme y respeta a su señor infernal;
-sin embargo, no es conforme con su posición en la jerarquía y quiere ascender hasta algún rango 
-marcial en el ejercito de Asmodeo.
+infierno, Asmodeo, a quién sirve como mensajera. Sin embargo, no es conforme con su posición en 
+la jerarquía y quiere ascender hasta algún rango marcial en el ejercito de Asmodeo.
 
 \begin{tikzpicture}[remember picture, overlay]
   \node[anchor=north west] at ([xshift=0cm,yshift=0.2cm]current page.north west){\includegraphics[scale=1.05]{media/vaelistra.png}};
 \end{tikzpicture}
 
 % Monster stat block
-\begin{DndMonster}[width=\linewidth]{Vaelistra (Cambión)}
+\begin{DndMonster}[width=\linewidth]{Vaelistra (Cambion)}
   \DndMonsterType{Infernal mediana, caótica malvada}
 
   % If you want to use commas in the key values, enclose the values in braces.
@@ -1014,29 +1033,200 @@ marcial en el ejercito de Asmodeo.
   La aptitud mágica del cambion es carisma (salvación de conjuros CD 14). Puede lanzar de forma 
   innata los siguientes conjuros, sin necesidad de componente materiales:
 
+  \noindent
+  3/día cada uno: \emph{alterar el propio aspecto}, \emph{detectar magia}, \emph{orden imperiosa}
+
+  \noindent
+  1/día cada uno: \emph{desplazamiento entre planos (solo lanzador)}
+
   \DndMonsterSection{Acciones}
   \DndMonsterAction{Ataque múltiple}
-  El perro realiza tres ataques de mordisco.
+  El cambion usa su rayo de fuego dos veces.
 
   %Default values are shown commented out
   \DndMonsterAttack[
-    name=Mordisco,
-    distance=melee, % valid options are in the set {both,melee,ranged},
-    %type=weapon, %valid options are in the set {weapon,spell}
-    mod=+4,
-    reach=5,
-    %range=20/60,
+    name=Rayo de fuego,
+    distance=ranged, % valid options are in the set {both,melee,ranged},
+    type=spell, %valid options are in the set {weapon,spell}
+    mod=+7,
+    %reach=120,
+    range=120,
     targets=un objetivo,
-    dmg=\DndDice{1d6+2},
-    dmg-type=perforante,
+    dmg=\DndDice{3d6},
+    dmg-type=fuego,
     %plus-dmg=,
     %plus-dmg-type=,
     %or-dmg=,
     %or-dmg-when=,
-    extra={. Si el objetivo es una criatura, debe superar una tirada de salvación de Constitución CD 12 contra enfermedad para no quedar envenenado hasta que se cure la enfermedad. Cada 24 horas, la criatura debe repetir la tirada de salvación y, si falla, su máximo de puntos de golpe se reduce en 5 (1d10). Esta reducción dura hasta que se cure la enfermedad. La criatura muere si la enfermedad reduce su máximo de puntos de golpe a 0},
+    %extra={.},
+  ]
+
+  \DndMonsterAction{Encanto infernal}
+  Un humanoide elegido por el cambion, que este pueda ver y se encuentre a 30 pies o menos de 
+  distancia, debera superar una tirada de salvación de sabiduría CD 14 o será hechizado 
+  mágicamente durante 1 día. El objetivo hechizado obedecerá las órdenes del cambion. No obstante,
+  si es dañado de alguna forma, ya sea por el cambion o cualquiera otra criatura, o recibe una 
+  orden suicida del infernal, el objetivo podrá repetir la tirada de salvación, finalizando el 
+  efecto sobre si mismo si tiene éxito. Además si el objetivo consigue superar la tirada de 
+  salvación o el efecto termina, sera inmune al encanto infernal del cambion durante las próximas
+  24 horas.
+
+
+\end{DndMonster}
+
+
+\chapter*{Goblins y variantes}
+\addcontentsline{toc}{section}{Goblins}
+
+\begin{tikzpicture}[remember picture, overlay]
+  \node[anchor=north west] at ([xshift=0cm,yshift=-2cm]current page.north west){\includegraphics[scale=1.0]{media/goblins.png}};
+\end{tikzpicture}
+
+%% Este bloque introduce un png transparente que empuja el texto a dos columnas hacia abajo
+\begin{strip}
+  \centering
+  \includegraphics[width=\textwidth, height=8.5cm]{media/invisible.png}
+\end{strip}
+%%
+
+% Monster stat block
+\begin{DndMonster}[width=\linewidth]{Goblin montado}
+  \DndMonsterType{Infernal mediana, caótica malvada}
+
+  % If you want to use commas in the key values, enclose the values in braces.
+  \DndMonsterBasics[
+      armor-class = {19},
+      hit-points  = {\DndDice{11d8 + 33}},
+      speed       = {30 pies, volar 60 pies},
+    ]
+
+  \DndMonsterAbilityScores[
+      str = 18,
+      dex = 18,
+      con = 16,
+      int = 14,
+      wis = 12,
+      cha = 16,
+    ]
+
+  \DndMonsterDetails[
+      saving-throws = {Fue +7, Con +6, Int +5, Car +6},
+      %skills = {Acrobatics +0, Animal Handling +0, Arcana +0, Athletics +0, Deception +0, History +0, Insight +0, Intimidation +0, Investigation +0, Medicine +0, Nature +0, Perception +0, Performance +0, Persuasion +0, Religion +0, Sleight of Hand +0, Stealth +0, Survival +0},
+      %damage-vulnerabilities = {cold},
+      damage-resistances = {frío, fuego, relámpago, veneno; contundente, cortante y perforante de ataques no mágicos},
+      %damage-immunities = {poison},
+      %condition-immunities = {poisoned},
+      senses = {visión en la oscuridad 120 pies, percepción pasiva 14},
+      languages = {común, abisal, infernal},
+      challenge = 5,
+    ]
+  % Traits
+  \DndMonsterAction{Bendición infernal}
+  La CA del cambion incluye su bonificador por carisma.
+
+  \DndMonsterAction{Lanzamiento de conjuros innato}
+  La aptitud mágica del cambion es carisma (salvación de conjuros CD 14). Puede lanzar de forma 
+  innata los siguientes conjuros, sin necesidad de componente materiales:
+
+  \noindent
+  3/día cada uno: \emph{alterar el propio aspecto}, \emph{detectar magia}, \emph{orden imperiosa}
+
+  \noindent
+  1/día cada uno: \emph{desplazamiento entre planos (solo lanzador)}
+
+  \DndMonsterSection{Acciones}
+  \DndMonsterAction{Ataque múltiple}
+  El cambion usa su rayo de fuego dos veces.
+
+  %Default values are shown commented out
+  \DndMonsterAttack[
+    name=Rayo de fuego,
+    distance=ranged, % valid options are in the set {both,melee,ranged},
+    type=spell, %valid options are in the set {weapon,spell}
+    mod=+7,
+    %reach=120,
+    range=120,
+    targets=un objetivo,
+    dmg=\DndDice{3d6},
+    dmg-type=fuego,
+    %plus-dmg=,
+    %plus-dmg-type=,
+    %or-dmg=,
+    %or-dmg-when=,
+    %extra={.},
   ]
 
 \end{DndMonster}
+
+% Monster stat block
+\begin{DndMonster}[width=\linewidth]{Goblin}
+  \DndMonsterType{Infernal mediana, caótica malvada}
+
+  % If you want to use commas in the key values, enclose the values in braces.
+  \DndMonsterBasics[
+      armor-class = {19},
+      hit-points  = {\DndDice{11d8 + 33}},
+      speed       = {30 pies, volar 60 pies},
+    ]
+
+  \DndMonsterAbilityScores[
+      str = 18,
+      dex = 18,
+      con = 16,
+      int = 14,
+      wis = 12,
+      cha = 16,
+    ]
+
+  \DndMonsterDetails[
+      saving-throws = {Fue +7, Con +6, Int +5, Car +6},
+      %skills = {Acrobatics +0, Animal Handling +0, Arcana +0, Athletics +0, Deception +0, History +0, Insight +0, Intimidation +0, Investigation +0, Medicine +0, Nature +0, Perception +0, Performance +0, Persuasion +0, Religion +0, Sleight of Hand +0, Stealth +0, Survival +0},
+      %damage-vulnerabilities = {cold},
+      damage-resistances = {frío, fuego, relámpago, veneno; contundente, cortante y perforante de ataques no mágicos},
+      %damage-immunities = {poison},
+      %condition-immunities = {poisoned},
+      senses = {visión en la oscuridad 120 pies, percepción pasiva 14},
+      languages = {común, abisal, infernal},
+      challenge = 5,
+    ]
+  % Traits
+  \DndMonsterAction{Bendición infernal}
+  La CA del cambion incluye su bonificador por carisma.
+
+  \DndMonsterAction{Lanzamiento de conjuros innato}
+  La aptitud mágica del cambion es carisma (salvación de conjuros CD 14). Puede lanzar de forma 
+  innata los siguientes conjuros, sin necesidad de componente materiales:
+
+  \noindent
+  3/día cada uno: \emph{alterar el propio aspecto}, \emph{detectar magia}, \emph{orden imperiosa}
+
+  \noindent
+  1/día cada uno: \emph{desplazamiento entre planos (solo lanzador)}
+
+  \DndMonsterSection{Acciones}
+  \DndMonsterAction{Ataque múltiple}
+  El cambion usa su rayo de fuego dos veces.
+
+  %Default values are shown commented out
+  \DndMonsterAttack[
+    name=Rayo de fuego,
+    distance=ranged, % valid options are in the set {both,melee,ranged},
+    type=spell, %valid options are in the set {weapon,spell}
+    mod=+7,
+    %reach=120,
+    range=120,
+    targets=un objetivo,
+    dmg=\DndDice{3d6},
+    dmg-type=fuego,
+    %plus-dmg=,
+    %plus-dmg-type=,
+    %or-dmg=,
+    %or-dmg-when=,
+    %extra={.},
+  ]
+
+\end{DndMonster}
+
 
 
 %%
